@@ -1,0 +1,196 @@
+/* ==============================
+   MONIKA DHANOTRA PORTFOLIO
+   ============================== */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  color: #263b4a;
+  background: #f6f9fa;
+}
+
+/* NAVIGATION */
+
+.navbar {
+  background: rgba(25, 42, 55, 0.96) !important;
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.10);
+}
+
+.navbar-brand {
+  letter-spacing: 0.3px;
+}
+
+.nav-link {
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.nav-link:hover {
+  color: #39b7c4 !important;
+  transform: translateY(-2px);
+}
+
+
+/* HERO */
+
+#home {
+  min-height: 100vh;
+  background:
+    linear-gradient(
+      135deg,
+      rgba(234, 245, 246, 0.95),
+      rgba(255, 255, 255, 0.98)
+    );
+  padding-top: 90px;
+}
+
+#home h1 {
+  color: #263b4a;
+}
+
+#home h2 {
+  color: #3d5965;
+}
+
+#home > .container {
+  animation: heroFade 0.8s ease;
+}
+
+@keyframes heroFade {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* BUTTONS */
+
+.btn {
+  border-radius: 8px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.btn-primary {
+  background: #0097a7;
+  border-color: #0097a7;
+}
+
+.btn-primary:hover {
+  background: #007f8d;
+  border-color: #007f8d;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+}
+
+.btn-outline-dark:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
+}
+
+
+/* SECTIONS */
+
+section {
+  padding-top: 90px !important;
+  padding-bottom: 90px !important;
+}
+
+section h2 {
+  color: #263b4a;
+}
+
+
+/* FLOATING CARDS */
+
+.card {
+  border: 1px solid #dce7ea;
+  border-radius: 16px;
+  background: #ffffff;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 18px 35px rgba(28, 55, 70, 0.15) !important;
+  border-color: #a8d8dd;
+}
+
+
+/* PROFESSIONAL HIGHLIGHTS */
+
+#about .card {
+  background: #eaf5f6;
+}
+
+#about .display-5 {
+  color: #007f8d;
+}
+
+
+/* PROJECTS */
+
+#projects {
+  background: #eef3f5 !important;
+}
+
+#projects .card {
+  overflow: hidden;
+}
+
+#projects .card h3 {
+  color: #263b4a;
+}
+
+#projects .badge {
+  background: #0097a7 !important;
+  padding: 10px 14px;
+  border-radius: 20px;
+}
+
+
+/* SKILLS */
+
+#skills {
+  background: #eef3f5 !important;
+}
+
+
+/* CONTACT */
+
+#contact {
+  background: #192a37 !important;
+}
+
+#contact h2 {
+  color: #ffffff;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+
+  #home h1 {
+    font-size: 3rem;
+  }
+
+  section {
+    padding-top: 65px !important;
+    padding-bottom: 65px !important;
+  }
+
+  .card:hover {
+    transform: translateY(-5px);
+  }
+}
