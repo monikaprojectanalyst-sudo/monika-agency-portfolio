@@ -484,3 +484,24 @@ section h2 {
     height: 145px;
   }
 }
+#home .container {
+  max-width: 900px;
+}
+
+#home .profile-photo {
+  margin-bottom: 10px;
+}
+
+#home h1 {
+  margin-top: 8px;
+  margin-bottom: 12px;
+}
+
+#home h2 {
+  line-height: 1.5;
+  margin-bottom: 18px;
+}
+
+#home .lead {
+  line-height: 1.7;
+}
