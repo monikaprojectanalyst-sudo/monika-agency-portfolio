@@ -458,3 +458,29 @@ section h2 {
   padding: 10px 18px;
   font-weight: 600;
 }
+/* =========================
+   PROFILE PHOTO
+========================= */
+
+.profile-photo {
+  width: 190px;
+  height: 190px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 50%;
+  border: 5px solid #ffffff;
+  box-shadow: 0 12px 30px rgba(28, 55, 70, 0.20);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-photo:hover {
+  transform: scale(1.05);
+  box-shadow: 0 18px 40px rgba(28, 55, 70, 0.28);
+}
+
+@media (max-width: 768px) {
+  .profile-photo {
+    width: 145px;
+    height: 145px;
+  }
+}
