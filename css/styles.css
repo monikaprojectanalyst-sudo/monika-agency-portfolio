@@ -466,7 +466,7 @@ section h2 {
   width: 125px;
   height: 125px;
   object-fit: cover;
-  object-position: center;
+  object-position: center 20%;
   border-radius: 50%;
   border: 5px solid #ffffff;
   box-shadow: 0 12px 30px rgba(28, 55, 70, 0.20);
