@@ -215,7 +215,7 @@ section h2 {
 .career-timeline::before {
   content: "";
   position: absolute;
-  top: 95px;
+  top: 115px;
   left: 7%;
   width: 86%;
   height: 5px;
