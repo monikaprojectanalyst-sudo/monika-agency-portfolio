@@ -197,28 +197,29 @@ section h2 {
 
 
 /* =========================
-   CAREER TRAJECTORY
+   CAREER TRAJECTORY GRAPH
 ========================= */
 
 #career-trajectory {
   background: #ffffff;
+  overflow: hidden;
 }
 
-.career-timeline {
+/* Graph area */
+.trajectory-graph {
   position: relative;
   max-width: 1100px;
-  margin: 0 auto;
-  padding-top: 40px;
+  height: 520px;
+  margin: 20px auto 0;
 }
 
-/* Rising career line */
-.career-timeline::before {
-  content: "";
+/* Main rising graph line */
+.trajectory-line {
   position: absolute;
-  top: 115px;
   left: 7%;
+  bottom: 80px;
   width: 86%;
-  height: 5px;
+  height: 6px;
   background: linear-gradient(
     90deg,
     #8e44ad,
@@ -227,94 +228,113 @@ section h2 {
     #0097a7
   );
   border-radius: 10px;
-  transform: rotate(-3deg);
+  transform: rotate(-18deg);
   transform-origin: left center;
+  box-shadow: 0 4px 12px rgba(0, 151, 167, 0.15);
 }
 
-/* Four timeline points */
-.career-item {
-  position: relative;
-  width: 25%;
-  float: left;
-  padding: 0 12px;
+/* Individual milestones */
+.trajectory-point {
+  position: absolute;
+  width: 220px;
   text-align: center;
+  z-index: 2;
 }
 
-.career-timeline::after {
-  content: "";
-  display: table;
-  clear: both;
+/* 2022 - lowest */
+.point-1 {
+  left: 1%;
+  bottom: 25px;
 }
 
-/* Years */
-.career-year {
-  font-size: 1.1rem;
-  font-weight: 700;
-  color: #007f8d;
-  margin-bottom: 15px;
+/* 2024 */
+.point-2 {
+  left: 27%;
+  bottom: 115px;
 }
 
-/* Dots on graph */
-.career-dot {
-  width: 22px;
-  height: 22px;
+/* 2025 */
+.point-3 {
+  left: 53%;
+  bottom: 205px;
+}
+
+/* 2026 - highest */
+.point-4 {
+  right: 1%;
+  bottom: 295px;
+}
+
+/* Graph dots */
+.trajectory-dot {
+  width: 24px;
+  height: 24px;
+  margin: 0 auto 15px;
   background: #ffffff;
   border: 6px solid #6c5ce7;
   border-radius: 50%;
-  margin: 0 auto 35px;
-  position: relative;
-  z-index: 2;
-  box-shadow: 0 0 0 6px rgba(108, 92, 231, 0.12);
+  box-shadow: 0 0 0 7px rgba(108, 92, 231, 0.12);
+  transition: transform 0.3s ease;
 }
 
-.career-dot-current {
+.trajectory-point:hover .trajectory-dot {
+  transform: scale(1.25);
+}
+
+.current-dot {
   border-color: #0097a7;
   box-shadow: 0 0 0 8px rgba(0, 151, 167, 0.15);
 }
 
-/* Career cards */
-.career-card {
+/* Milestone information */
+.trajectory-label {
   background: #ffffff;
   border: 1px solid #dce7ea;
-  border-radius: 18px;
-  padding: 26px 20px;
-  min-height: 270px;
-  box-shadow: 0 10px 25px rgba(28, 55, 70, 0.08);
+  border-radius: 16px;
+  padding: 16px 12px;
+  box-shadow: 0 10px 25px rgba(28, 55, 70, 0.10);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.career-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 20px 40px rgba(28, 55, 70, 0.16);
+.trajectory-label:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 35px rgba(28, 55, 70, 0.16);
 }
 
-.career-card h4 {
-  color: #263b4a;
-}
-
-.career-card h6 {
+.trajectory-year {
+  display: block;
   color: #007f8d;
-  margin-bottom: 18px;
+  font-size: 1.15rem;
+  font-weight: 800;
+  margin-bottom: 7px;
 }
 
-.career-card p {
-  color: #566b75;
-  line-height: 1.6;
+.trajectory-label h5 {
+  color: #263b4a;
+  font-weight: 700;
+  font-size: 1rem;
+  margin-bottom: 6px;
 }
 
-/* Skill tags */
-.career-tag {
+.trajectory-label p {
+  color: #617680;
+  font-size: 0.85rem;
+  margin-bottom: 10px;
+}
+
+/* Skill pill */
+.trajectory-skill {
   display: inline-block;
   background: #eaf5f6;
   color: #007f8d;
-  padding: 7px 13px;
+  padding: 6px 11px;
   border-radius: 20px;
-  font-weight: 600;
-  font-size: 0.85rem;
+  font-size: 0.75rem;
+  font-weight: 700;
 }
 
-/* Current role highlight */
-.career-current {
+/* Current role */
+.current-role {
   border: 2px solid #0097a7;
 }
 
@@ -322,35 +342,79 @@ section h2 {
   display: inline-block;
   background: #0097a7;
   color: #ffffff;
-  padding: 5px 12px;
-  border-radius: 20px;
-  font-size: 0.72rem;
-  font-weight: 700;
-  margin-bottom: 15px;
+  padding: 4px 10px;
+  border-radius: 15px;
+  font-size: 0.65rem;
+  font-weight: 800;
   letter-spacing: 1px;
+  margin-bottom: 7px;
+}
+
+/* Upward arrow */
+.trajectory-arrow {
+  position: absolute;
+  right: -1%;
+  top: 25px;
+  color: #0097a7;
+  font-size: 3.2rem;
+  font-weight: 700;
+}
+
+/* Career progression summary */
+.trajectory-summary {
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 18px 25px;
+  background: #eef7f8;
+  border-radius: 14px;
+  color: #3d5965;
+}
+
+.trajectory-summary strong {
+  color: #263b4a;
+  margin: 0 10px;
+}
+
+.trajectory-summary span {
+  color: #0097a7;
+  font-size: 1.3rem;
 }
 
 /* Mobile */
 @media (max-width: 900px) {
 
-  .career-timeline::before {
+  .trajectory-graph {
+    height: auto;
+    margin-top: 30px;
+  }
+
+  .trajectory-line,
+  .trajectory-arrow {
     display: none;
   }
 
-  .career-item {
+  .trajectory-point {
+    position: relative;
     width: 100%;
-    float: none;
-    margin-bottom: 30px;
+    max-width: 500px;
+    left: auto;
+    right: auto;
+    bottom: auto;
+    margin: 0 auto 35px;
   }
 
-  .career-dot {
-    margin-bottom: 20px;
+  .trajectory-dot {
+    margin-bottom: 15px;
   }
 
-  .career-card {
-    max-width: 550px;
-    margin: 0 auto;
-    min-height: auto;
+  .trajectory-summary strong,
+  .trajectory-summary span {
+    display: block;
+    margin: 8px 0;
+  }
+
+  .trajectory-summary span {
+    transform: rotate(90deg);
   }
 }
-
