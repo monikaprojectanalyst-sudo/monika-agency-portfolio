@@ -194,3 +194,163 @@ section h2 {
     transform: translateY(-5px);
   }
 }
+
+
+/* =========================
+   CAREER TRAJECTORY
+========================= */
+
+#career-trajectory {
+  background: #ffffff;
+}
+
+.career-timeline {
+  position: relative;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding-top: 40px;
+}
+
+/* Rising career line */
+.career-timeline::before {
+  content: "";
+  position: absolute;
+  top: 95px;
+  left: 7%;
+  width: 86%;
+  height: 5px;
+  background: linear-gradient(
+    90deg,
+    #8e44ad,
+    #6c5ce7,
+    #3f7dd9,
+    #0097a7
+  );
+  border-radius: 10px;
+  transform: rotate(-3deg);
+  transform-origin: left center;
+}
+
+/* Four timeline points */
+.career-item {
+  position: relative;
+  width: 25%;
+  float: left;
+  padding: 0 12px;
+  text-align: center;
+}
+
+.career-timeline::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Years */
+.career-year {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #007f8d;
+  margin-bottom: 15px;
+}
+
+/* Dots on graph */
+.career-dot {
+  width: 22px;
+  height: 22px;
+  background: #ffffff;
+  border: 6px solid #6c5ce7;
+  border-radius: 50%;
+  margin: 0 auto 35px;
+  position: relative;
+  z-index: 2;
+  box-shadow: 0 0 0 6px rgba(108, 92, 231, 0.12);
+}
+
+.career-dot-current {
+  border-color: #0097a7;
+  box-shadow: 0 0 0 8px rgba(0, 151, 167, 0.15);
+}
+
+/* Career cards */
+.career-card {
+  background: #ffffff;
+  border: 1px solid #dce7ea;
+  border-radius: 18px;
+  padding: 26px 20px;
+  min-height: 270px;
+  box-shadow: 0 10px 25px rgba(28, 55, 70, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.career-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(28, 55, 70, 0.16);
+}
+
+.career-card h4 {
+  color: #263b4a;
+}
+
+.career-card h6 {
+  color: #007f8d;
+  margin-bottom: 18px;
+}
+
+.career-card p {
+  color: #566b75;
+  line-height: 1.6;
+}
+
+/* Skill tags */
+.career-tag {
+  display: inline-block;
+  background: #eaf5f6;
+  color: #007f8d;
+  padding: 7px 13px;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 0.85rem;
+}
+
+/* Current role highlight */
+.career-current {
+  border: 2px solid #0097a7;
+}
+
+.current-badge {
+  display: inline-block;
+  background: #0097a7;
+  color: #ffffff;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  letter-spacing: 1px;
+}
+
+/* Mobile */
+@media (max-width: 900px) {
+
+  .career-timeline::before {
+    display: none;
+  }
+
+  .career-item {
+    width: 100%;
+    float: none;
+    margin-bottom: 30px;
+  }
+
+  .career-dot {
+    margin-bottom: 20px;
+  }
+
+  .career-card {
+    max-width: 550px;
+    margin: 0 auto;
+    min-height: auto;
+  }
+}
+
