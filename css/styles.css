@@ -505,3 +505,227 @@ section h2 {
 #home .lead {
   line-height: 1.7;
 }
+/* =========================
+   PROFESSIONAL EXPERIENCE GRAPH
+========================= */
+
+.experience-graph-card {
+  background: #ffffff;
+  border: 1px solid #dce7ea;
+  border-radius: 22px;
+  padding: 32px;
+  box-shadow: 0 16px 35px rgba(28, 55, 70, 0.12);
+}
+
+.experience-graph-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 30px;
+}
+
+.experience-graph-header h3,
+.experience-graph-header h4 {
+  color: #263b4a;
+}
+
+.experience-chart {
+  display: flex;
+  min-height: 430px;
+}
+
+/* LEFT AXIS */
+.career-y-axis {
+  width: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px 15px 55px 0;
+  font-weight: 600;
+  font-size: 0.85rem;
+  color: #566b75;
+}
+
+/* GRAPH AREA */
+.career-grid {
+  position: relative;
+  flex: 1;
+  min-height: 430px;
+  border-left: 1px solid #dce7ea;
+  border-bottom: 1px solid #dce7ea;
+}
+
+/* HORIZONTAL GRID LINES */
+.grid-line {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: #e5ecef;
+}
+
+.level-1 { top: 12%; }
+.level-2 { top: 36%; }
+.level-3 { top: 60%; }
+.level-4 { top: 84%; }
+
+/* RISING CAREER LINE */
+.career-growth-line {
+  position: absolute;
+  left: 7%;
+  bottom: 70px;
+  width: 82%;
+  height: 4px;
+  background: linear-gradient(
+    90deg,
+    #6c5ce7,
+    #3f7dd9,
+    #0097a7
+  );
+  transform: rotate(-15deg);
+  transform-origin: left center;
+  border-radius: 10px;
+  z-index: 1;
+}
+
+/* MILESTONE NODES */
+.career-node {
+  position: absolute;
+  width: 170px;
+  text-align: center;
+  z-index: 3;
+}
+
+.node-2022 {
+  left: 4%;
+  bottom: 55px;
+}
+
+.node-2024 {
+  left: 31%;
+  bottom: 135px;
+}
+
+.node-2025 {
+  left: 57%;
+  bottom: 220px;
+}
+
+.node-2026 {
+  right: 2%;
+  bottom: 305px;
+}
+
+.node-circle {
+  width: 48px;
+  height: 48px;
+  margin: 0 auto 8px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 5px solid #6c5ce7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  color: #6c5ce7;
+  box-shadow: 0 0 0 7px rgba(108, 92, 231, 0.12);
+}
+
+.current-node {
+  border-color: #0097a7;
+  color: #0097a7;
+  box-shadow: 0 0 0 8px rgba(0, 151, 167, 0.14);
+}
+
+/* ROLE LABELS */
+.node-details {
+  background: #ffffff;
+  border: 1px solid #dce7ea;
+  border-radius: 12px;
+  padding: 9px 10px;
+  box-shadow: 0 8px 20px rgba(28, 55, 70, 0.10);
+}
+
+.node-details strong {
+  display: block;
+  color: #263b4a;
+  font-size: 0.78rem;
+}
+
+.node-details span {
+  display: block;
+  color: #007f8d;
+  font-size: 0.72rem;
+}
+
+.node-details small {
+  color: #70838c;
+  font-size: 0.68rem;
+}
+
+.current-position {
+  border: 2px solid #0097a7;
+}
+
+.career-current-badge {
+  display: inline-block !important;
+  background: #0097a7;
+  color: white !important;
+  padding: 3px 8px;
+  border-radius: 12px;
+  font-size: 0.58rem !important;
+  font-weight: 800;
+  letter-spacing: 0.7px;
+  margin-bottom: 4px;
+}
+
+/* X AXIS */
+.career-x-axis {
+  position: absolute;
+  bottom: -35px;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-around;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #566b75;
+}
+
+/* MOBILE */
+@media (max-width: 900px) {
+
+  .experience-graph-header {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .experience-chart {
+    display: block;
+  }
+
+  .career-y-axis {
+    display: none;
+  }
+
+  .career-grid {
+    border: none;
+    min-height: auto;
+  }
+
+  .grid-line,
+  .career-growth-line,
+  .career-x-axis {
+    display: none;
+  }
+
+  .career-node {
+    position: relative;
+    width: 100%;
+    max-width: 420px;
+    left: auto;
+    right: auto;
+    bottom: auto;
+    margin: 0 auto 30px;
+  }
+}
