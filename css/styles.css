@@ -1071,3 +1071,380 @@ section h2::after {
     font-weight: 700 !important;
     line-height: 1.2 !important;
 }
+
+/* =========================================
+   FEATURED PROJECTS - FLASHY RECRUITER STYLE
+========================================= */
+
+#projects {
+  background:
+    radial-gradient(circle at 10% 20%, rgba(108, 92, 231, 0.10), transparent 30%),
+    radial-gradient(circle at 90% 80%, rgba(0, 151, 167, 0.12), transparent 32%),
+    linear-gradient(135deg, #f7fbff, #eef5f8) !important;
+}
+
+
+/* SECTION TITLE */
+
+#projects h2 {
+  font-size: 2.4rem;
+  background: linear-gradient(
+    90deg,
+    #24384a,
+    #3f7dd9,
+    #6c5ce7,
+    #0097a7
+  );
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+/* PROJECT CARDS */
+
+#projects .project-card,
+#projects .project-showcase-card {
+
+  position: relative;
+  overflow: hidden;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255,255,255,0.98),
+      rgba(247,250,255,0.95)
+    ) !important;
+
+  border: 1px solid rgba(63,125,217,0.20) !important;
+  border-radius: 22px !important;
+
+  box-shadow:
+    0 14px 35px rgba(35, 63, 85, 0.12) !important;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+}
+
+
+/* GRADIENT TOP LINE */
+
+#projects .project-card::before,
+#projects .project-showcase-card::before {
+
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 6px;
+
+  background:
+    linear-gradient(
+      90deg,
+      #7c3aed,
+      #3f7dd9,
+      #06b6d4,
+      #10b981
+    );
+
+  z-index: 5;
+}
+
+
+/* HOVER */
+
+#projects .project-card:hover,
+#projects .project-showcase-card:hover {
+
+  transform:
+    translateY(-10px)
+    scale(1.015);
+
+  border-color:
+    rgba(63,125,217,0.40) !important;
+
+  box-shadow:
+    0 26px 55px rgba(35, 63, 85, 0.20) !important;
+}
+
+
+/* PROJECT CATEGORY - NEWSLETTER */
+
+#projects .project-category {
+
+  display: inline-block;
+
+  padding: 8px 15px;
+
+  border-radius: 22px;
+
+  background:
+    linear-gradient(
+      90deg,
+      #3f7dd9,
+      #6c5ce7
+    ) !important;
+
+  color: #ffffff !important;
+
+  font-size: 0.75rem;
+
+  font-weight: 800 !important;
+
+  letter-spacing: 0.7px;
+
+  box-shadow:
+    0 5px 14px rgba(108,92,231,0.20);
+}
+
+
+/* PROLEED CATEGORY */
+
+#projects .proleed-badge {
+
+  display: inline-block !important;
+
+  background:
+    linear-gradient(
+      90deg,
+      #0097a7,
+      #3f7dd9,
+      #6c5ce7
+    ) !important;
+
+  color: #ffffff !important;
+
+  padding: 8px 15px !important;
+
+  border-radius: 22px !important;
+
+  border: none !important;
+
+  font-size: 0.75rem !important;
+
+  font-weight: 800 !important;
+
+  letter-spacing: 0.5px;
+
+  box-shadow:
+    0 5px 14px rgba(63,125,217,0.22);
+}
+
+
+/* PROJECT TITLES */
+
+#projects h3 {
+
+  color: #23384a;
+
+  font-weight: 800;
+
+  transition:
+    color 0.25s ease;
+}
+
+#projects .project-card:hover h3,
+#projects .project-showcase-card:hover h3 {
+
+  color: #3f7dd9;
+}
+
+
+/* KEY CONTRIBUTIONS */
+
+#projects ul li::marker {
+  color: #3f7dd9;
+}
+
+#projects .project-card:nth-child(2) ul li::marker {
+  color: #10b981;
+}
+
+
+/* SKILL PILLS */
+
+#projects .project-tags span {
+
+  padding: 8px 13px !important;
+
+  border-radius: 25px !important;
+
+  font-size: 0.75rem !important;
+
+  font-weight: 700 !important;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+
+#projects .project-tags span:nth-child(1) {
+
+  background:
+    linear-gradient(
+      135deg,
+      #dff8f2,
+      #e7fff9
+    ) !important;
+
+  color: #00876f !important;
+
+  border:
+    1px solid #b8eadf !important;
+}
+
+
+#projects .project-tags span:nth-child(2) {
+
+  background:
+    linear-gradient(
+      135deg,
+      #e4efff,
+      #eef4ff
+    ) !important;
+
+  color: #2563d9 !important;
+
+  border:
+    1px solid #c7dafc !important;
+}
+
+
+#projects .project-tags span:nth-child(3) {
+
+  background:
+    linear-gradient(
+      135deg,
+      #efe7ff,
+      #f7f1ff
+    ) !important;
+
+  color: #7444cc !important;
+
+  border:
+    1px solid #dbcdf8 !important;
+}
+
+
+#projects .project-tags span:nth-child(4) {
+
+  background:
+    linear-gradient(
+      135deg,
+      #fff0df,
+      #fff7ec
+    ) !important;
+
+  color: #c65b12 !important;
+
+  border:
+    1px solid #f3d4b1 !important;
+}
+
+
+#projects .project-tags span:hover {
+
+  transform:
+    translateY(-3px);
+
+  box-shadow:
+    0 7px 15px rgba(35,63,85,0.12);
+}
+
+
+/* MAIN BUTTONS */
+
+#projects .btn-primary,
+#projects .project-link-btn {
+
+  background:
+    linear-gradient(
+      90deg,
+      #0097a7,
+      #3f7dd9,
+      #6c5ce7
+    ) !important;
+
+  color: #ffffff !important;
+
+  border: none !important;
+
+  border-radius: 10px !important;
+
+  padding: 11px 18px !important;
+
+  font-weight: 800 !important;
+
+  box-shadow:
+    0 7px 16px rgba(63,125,217,0.25);
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+
+#projects .btn-primary:hover,
+#projects .project-link-btn:hover {
+
+  transform:
+    translateY(-3px);
+
+  box-shadow:
+    0 12px 25px rgba(63,125,217,0.35);
+}
+
+
+/* RESULT BADGE */
+
+#projects .d-flex .proleed-badge {
+
+  background:
+    linear-gradient(
+      90deg,
+      #dff8ef,
+      #e4fff7
+    ) !important;
+
+  color: #008667 !important;
+
+  border:
+    1px solid #b8eadb !important;
+
+  font-weight: 800 !important;
+}
+
+
+/* SUBTLE GLOW ON HOVER */
+
+#projects .project-card:hover::after,
+#projects .project-showcase-card:hover::after {
+
+  content: "";
+
+  position: absolute;
+
+  width: 140px;
+  height: 140px;
+
+  right: -60px;
+  top: -60px;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(108,92,231,0.14),
+      transparent 70%
+    );
+
+  pointer-events: none;
+}
