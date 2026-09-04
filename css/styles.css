@@ -1005,11 +1005,18 @@ section h2::after {
   border-radius: 50%;
 }
 
-/* Hero profile photo */
-.profile-photo {
-  width: 135px !important;
-  height: 135px !important;
+/* HERO PROFILE PHOTO - FINAL SIZE */
+#home .profile-photo {
+  width: 170px !important;
+  height: 170px !important;
+  max-width: none !important;
+  max-height: none !important;
+
   object-fit: cover !important;
   object-position: center 20% !important;
+
   border-radius: 50% !important;
+  border: 5px solid white;
+
+  box-shadow: 0 10px 30px rgba(31, 55, 70, 0.18);
 }
