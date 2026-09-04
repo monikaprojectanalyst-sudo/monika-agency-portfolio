@@ -1020,3 +1020,24 @@ section h2::after {
 
   box-shadow: 0 10px 30px rgba(31, 55, 70, 0.18);
 }
+/* FIX PROLEED BADGES */
+.project-card .badge.bg-primary {
+  background: linear-gradient(90deg, #0097a7, #3f7dd9) !important;
+  color: #ffffff !important;
+  border: none !important;
+  font-weight: 700;
+}
+
+/* Top project category badge */
+.project-card .badge.bg-primary.mb-3 {
+  padding: 8px 14px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  letter-spacing: 0.3px;
+}
+
+/* Result badge */
+.project-card .d-flex .badge {
+  padding: 10px 15px;
+  font-size: 0.78rem;
+}
