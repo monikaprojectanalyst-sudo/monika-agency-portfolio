@@ -995,3 +995,12 @@ section h2::after {
       #263f52
     ) !important;
 }
+
+/* HERO PROFILE PHOTO SIZE */
+.hero-profile-img {
+  width: 130px !important;
+  height: 130px !important;
+  object-fit: cover;
+  object-position: center top;
+  border-radius: 50%;
+}
