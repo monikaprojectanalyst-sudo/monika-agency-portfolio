@@ -1041,3 +1041,20 @@ section h2::after {
   padding: 10px 15px;
   font-size: 0.78rem;
 }
+
+/* FORCE LARGER HERO PROFILE PHOTO */
+#home img.profile-photo {
+    width: 180px !important;
+    height: 180px !important;
+    min-width: 180px !important;
+    min-height: 180px !important;
+    max-width: 180px !important;
+    max-height: 180px !important;
+
+    object-fit: cover !important;
+    object-position: center 15% !important;
+
+    border-radius: 50% !important;
+    border: 5px solid #ffffff !important;
+    box-shadow: 0 10px 28px rgba(31, 52, 68, 0.18) !important;
+}
